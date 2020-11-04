@@ -80,12 +80,40 @@ public class ZeroOnePackage {
 
 
     public static void main(String[] args) {
-        int[] weight = {0, 1, 2, 3, 4, 5};
-        int[] value = {0, 5, 1, 3, 2, 4};
+        int[] weight = { 1, 2, 3, 4, 5};
+        int[] value = { 5, 1, 3, 2, 4};
         int v = 10;
         int n = 5;
 
         zeroOnePack(n, v, weight, value);
+
+        traceBack(n, v, weight, value);
+
+    }
+
+
+    /**
+     * 0-1背包问题
+     *
+     * @param N      物品数量
+     * @param W      背包容量
+     * @param weight 物品重量
+     * @param value  物品价格
+     * @return 最大价值
+     */
+    private static void traceBack(int N, int W, int[] weight, int[] value) {
+
+        int[] dp = new int[W + 1]; // 范围[0,W] 当前背包容量对应的物品总价值
+
+        for (int i = 0; i < N; i++) { // 一件、一件的向包中放入每件物品
+
+            for (int j = W; j >= weight[i]; j--) { //只要背包可以放入就放
+                dp[j] = Math.max(dp[j - weight[i]] + value[i], dp[j]); // 比较放入物品之前与放入之后的价值哪个大
+
+            }
+
+        }
+        System.out.println(dp[W]);
 
     }
 }
