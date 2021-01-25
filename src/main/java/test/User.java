@@ -5,7 +5,7 @@ public class User {
 
     private Long id;
     private String name;
-    protected volatile int age;
+    private volatile int age;
 
     public int getAge() {
         return age;
