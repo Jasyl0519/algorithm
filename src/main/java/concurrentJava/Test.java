@@ -1,5 +1,6 @@
 package concurrentJava;
 
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.IntBinaryOperator;
 
@@ -12,10 +13,18 @@ public class Test {
 
 
     public static void main(String[] args) {
-        AtomicInteger ai = new AtomicInteger(0);
 
-        accumulateAndGet(10, Integer::sum, ai);
-        System.out.println(ai.get());
+        TimeUnit timeUnit = TimeUnit.SECONDS;
+
+
+        System.out.println(1 << 10);
+        System.out.println(System.nanoTime());
+        System.out.println(timeUnit.toNanos(2));
+        System.out.println(System.nanoTime() + timeUnit.toNanos(2));
+        //AtomicInteger ai = new AtomicInteger(0);
+        //
+        //accumulateAndGet(10, Integer::sum, ai);
+        //System.out.println(ai.get());
     }
 
 
