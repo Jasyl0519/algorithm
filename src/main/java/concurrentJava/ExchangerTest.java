@@ -22,6 +22,7 @@ public class ExchangerTest {
     DataBuffer initialFullBuffer =  new DataBuffer();
 
     class FillingLoop implements Runnable {
+        @Override
         public void run() {
             DataBuffer currentBuffer = initialEmptyBuffer;
             try {
@@ -41,6 +42,7 @@ public class ExchangerTest {
     }
 
     class EmptyingLoop implements Runnable {
+        @Override
         public void run() {
             DataBuffer currentBuffer = initialFullBuffer;
             try {
@@ -95,7 +97,6 @@ public class ExchangerTest {
             return name;
         }
     }
-
 
     public static void main(String[] args) {
         ExchangerTest exchangerTest = new ExchangerTest();
