@@ -13,7 +13,7 @@ import static java.awt.image.DataBuffer.TYPE_INT;
 
 /**
  *
- * 挂车A装了3辆新车,挂车B没有装任何东西，2辆车来到某个点，车辆A和车辆B装载的车辆互换。
+ * 板车A装了3辆新车,板车B没有装任何东西，2辆车来到某个点，车辆A和车辆B装载的车辆互换。
  *
  */
 public class ExchangerTest {
@@ -29,10 +29,11 @@ public class ExchangerTest {
                     if (currentBuffer.isFull()) {
                         currentBuffer = exchanger.exchange(currentBuffer);
                     } else {
-                        Car car = new Car("car-" + new Random());
-                        System.out.println("装了" + car.getName() + "到挂车A！");
-                        TimeUnit.SECONDS.sleep(3);
+                        int num = (int) (1 + Math.random() * 100);
+                        Car car = new Car("car-" + num);
+                        //TimeUnit.SECONDS.sleep(2);
                         currentBuffer.add(car);
+                        System.out.println("装了新车" + car.getName() + "到板车A！");
                     }
                 }
             } catch (InterruptedException ex) {
@@ -46,12 +47,12 @@ public class ExchangerTest {
             try {
                 while (currentBuffer != null) {
                     if (currentBuffer.isEmpty()) {
-                        System.out.println("挂车B等待装车！");
+                        System.out.println("板车B等待装车！");
                         currentBuffer = exchanger.exchange(currentBuffer);
-                        System.out.println("两辆挂车上的车辆交换成功！");
+                        System.out.println("两辆板车交换成功！");
                     } else {
                         Car car = currentBuffer.remove();
-                        System.out.println("挂车B上" + car.getName() + "卸货！");
+                        System.out.println("板车B上新车" + car.getName() + "卸货完成！");
                     }
                 }
             } catch (InterruptedException ex) {
@@ -65,9 +66,6 @@ public class ExchangerTest {
     }
 
     class DataBuffer {
-        /**
-         * 只能装3辆车
-         */
         private ArrayList<Car> cars;
         public DataBuffer() {
             cars = new ArrayList();
@@ -75,6 +73,7 @@ public class ExchangerTest {
         public boolean isEmpty() {
             return cars.isEmpty();
         }
+        //只能装3辆车
         public boolean isFull() {
             return cars.size() == 3;
         }
@@ -95,7 +94,6 @@ public class ExchangerTest {
             return name;
         }
     }
-
 
     public static void main(String[] args) {
         ExchangerTest exchangerTest = new ExchangerTest();
