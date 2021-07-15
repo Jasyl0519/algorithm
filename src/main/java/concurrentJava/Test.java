@@ -17,6 +17,8 @@ public class Test {
         TimeUnit timeUnit = TimeUnit.SECONDS;
 
 
+        System.out.println(0xff);
+        System.out.println(Math.pow(2,8));
         System.out.println(1 << 10);
         System.out.println(System.nanoTime());
         System.out.println(timeUnit.toNanos(2));

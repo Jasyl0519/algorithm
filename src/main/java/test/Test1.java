@@ -26,7 +26,7 @@ public class Test1 {
         //
         //    System.out.println(s1.equals(""));
         //}
-        
+
            //reverseWords("  hello world!  ");
         //isPalindrome("A man, a plan, a canal: Panama") ;
 
@@ -285,7 +285,7 @@ public class Test1 {
         }
         int left = 0;
         int right = sb.length() - 1;
-        
+
         while (left < right) {
             if (Character.toLowerCase(sb.charAt(left)) == Character.toLowerCase(sb.charAt(right))) {
                 left++;
