@@ -1,6 +1,8 @@
 package concurrentJava;
 
-import java.util.concurrent.TimeUnit;
+import com.google.common.collect.Lists;
+
+import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.IntBinaryOperator;
 
@@ -14,19 +16,21 @@ public class Test {
 
     public static void main(String[] args) {
 
-        TimeUnit timeUnit = TimeUnit.SECONDS;
+        List<Integer> list = Lists.newArrayList(1,2,3,4,5,6,7,8,9,10);
+
+        List<Integer> result = Lists.newArrayList();
+        list.parallelStream().forEach((n) -> {
+            result.add(n);
+
+        });
+
+        System.out.println(result);
+
+        System.out.println(0x61c88647);
 
 
-        System.out.println(0xff);
-        System.out.println(Math.pow(2,8));
-        System.out.println(1 << 10);
-        System.out.println(System.nanoTime());
-        System.out.println(timeUnit.toNanos(2));
-        System.out.println(System.nanoTime() + timeUnit.toNanos(2));
-        //AtomicInteger ai = new AtomicInteger(0);
-        //
-        //accumulateAndGet(10, Integer::sum, ai);
-        //System.out.println(ai.get());
+
+
     }
 
 

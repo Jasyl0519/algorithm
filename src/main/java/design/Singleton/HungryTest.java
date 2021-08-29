@@ -12,17 +12,11 @@ import java.util.concurrent.ExecutorService;
 public class HungryTest {
 
     public static void main(String[] args) {
-
-        System.out.println( (1+2) / 2);
-        System.out.println( (double) (1+2) / 2);
-
-
-
-        ExecutorService executorService = Lzay.getExecutorService();
+        ExecutorService executorService = ExecutorServiceEnum.INSTANCE.getExecutorService();
         executorService.execute(new Runnable() {
             @Override
             public void run() {
-                System.out.println("懒汉式的创建线程池！");
+                System.out.println("枚举的创建线程池！");
             }
         });
     }
