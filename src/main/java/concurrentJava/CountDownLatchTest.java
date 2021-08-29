@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * Description:
- * Author: weiwei.xie
+ * Author: jasonz
  * date: 2021-01-25 17:54
  */
 public class CountDownLatchTest {

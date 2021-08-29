@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * Description:
- * Author: weiwei.xie
+ * Author: jasonz
  * date: 2021-08-08 下午6:13
  */
 public class InheritableThreadLocalTransfer {

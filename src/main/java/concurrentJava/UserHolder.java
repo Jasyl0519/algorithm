@@ -3,7 +3,7 @@ package concurrentJava;
 
 /**
  * Description:
- * Author: weiwei.xie
+ * Author: jasonz
  * date: 2021-08-08 上午10:51
  */
 public class UserHolder {

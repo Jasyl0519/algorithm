@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * Description:
- * Author: weiwei.xie
+ * Author: jasonz
  * date: 2021-08-15 下午2:16
  */
 public class WorkerThreadTest {

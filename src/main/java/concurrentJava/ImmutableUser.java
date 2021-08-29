@@ -4,7 +4,7 @@ import java.lang.reflect.Field;
 
 /**
  * Description:
- * Author: weiwei.xie
+ * Author: jasonz
  * date: 2021-07-25 下午4:34
  */
 public class ImmutableUser {

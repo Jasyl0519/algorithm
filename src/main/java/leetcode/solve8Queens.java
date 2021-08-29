@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Description: 8皇后
  *
- * Author: weiwei.xie
+ * Author: jasonz
  * date: 2021-07-15 下午11:38
  */
 public class solve8Queens {

@@ -5,7 +5,7 @@ import java.util.concurrent.Executors;
 
 /**
  * Description:
- * Author: weiwei.xie
+ * Author: jasonz
  * date: 2021-07-18 下午5:11
  */
 public final class StaticInnerClass {

@@ -7,7 +7,7 @@ import java.util.concurrent.atomic.AtomicIntegerArray;
 
 /**
  * Description:
- * Author: weiwei.xie
+ * Author: jasonz
  * date: 2020-12-26 17:51
  */
 public class TesAtomicIntegerArray {

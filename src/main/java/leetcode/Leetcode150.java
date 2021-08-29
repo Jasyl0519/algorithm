@@ -6,7 +6,7 @@ import java.util.Stack;
 
 /**
  * Description:
- * Author: weiwei.xie
+ * Author: jasonz
  * date: 2020-11-29 21:00
  */
 public class Leetcode150 {

@@ -2,7 +2,7 @@ package concurrentJava.threadpremessage;
 
 /**
  * Description:
- * Author: weiwei.xie
+ * Author: jasonz
  * date: 2021-08-15 下午12:37
  */
 public class ThreadPreMessageClient {

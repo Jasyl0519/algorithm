@@ -2,7 +2,7 @@ package concurrentJava;
 
 /**
  * Description:
- * Author: weiwei.xie
+ * Author: jasonz
  * date: 2021-07-25 下午4:42
  */
 public class MutableUser {

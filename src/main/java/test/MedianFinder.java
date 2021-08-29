@@ -5,7 +5,7 @@ import java.util.PriorityQueue;
 
 /**
  * Description:
- * Author: weiwei.xie
+ * Author: jasonz
  * date: 2021-07-05 下午11:54
  */
 public class MedianFinder {
